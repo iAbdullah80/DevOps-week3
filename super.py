@@ -1,4 +1,2 @@
-def print_name():
-    print("Abdullah")
-
-print_name()
+def test:
+    print("Hello from super.py")
