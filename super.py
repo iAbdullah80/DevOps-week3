@@ -1,1 +1,2 @@
-print('test')
+def super():
+    print("super() from super.py")
