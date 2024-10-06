@@ -1,5 +1,4 @@
+def print_name():
+    print("Abdullah")
 
-
-
-Def test:
-print('super.py'
+print_name()
