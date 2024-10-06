@@ -1,4 +1,4 @@
-name: Readme checker
+name: Lint
 
 on:
   push:
@@ -6,13 +6,17 @@ on:
       - main
 
 jobs:
-    readme-checker:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v2
-            - name: Readme checker
-              run: |
-                    if [ ! -f README.md ]; then
-                        exit 1
-                    fi
-            
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Super-linter
+        uses: super-linter/super-linter@v7.1.0
+        env:
+          VALIDATE_ALL_CODEBASE: true
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VALIDATE_PYTHON: true
