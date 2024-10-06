@@ -11,8 +11,8 @@ jobs:
         steps:
             - uses: actions/checkout@v2
             - name: Readme checker
-                run: |
+              run: |
                     if [ ! -f README.md ]; then
-                        exit 1"
+                        exit 1
                     fi
             
