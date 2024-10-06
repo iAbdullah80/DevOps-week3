@@ -1,2 +1,2 @@
 def Super():
-    print("super() from super.py")
+    print("super() from super.py"
